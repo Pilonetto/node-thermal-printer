@@ -12,7 +12,8 @@ declare enum PrinterTypes {
   TANCA = "tanca",
   DARUMA = "daruma",
   BROTHER = "brother",
-  CUSTOM = "custom"
+  CUSTOM = "custom",
+  BEMATECH = "bematech"
 }
 
 declare enum BreakLine {
