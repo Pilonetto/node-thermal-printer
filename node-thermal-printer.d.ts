@@ -70,12 +70,20 @@ declare type CutOptions = {
 }
 
 declare class ThermalPrinter {
-  printerTypes: PrinterTypes;
+  config: {
+    type?: PrinterTypes;
+    interface: string;
+    width?: number;
+    characterSet?: CharacterSet;
+    lineCharacter?: string;
+    driver?: Object;
+    removeSpecialCharacters?: boolean;
+    breakLine?: BreakLine;
+    options?: {
+      timeout?: number;
+    };
+  };
 
-  /**
-   * Constructor
-   * @param Object config (type, interface, width, characterSet, removeSpecialCharacters, options)
-  */
   constructor(config: {
     type?: PrinterTypes;
     interface: string;
@@ -86,9 +94,10 @@ declare class ThermalPrinter {
     removeSpecialCharacters?: boolean;
     breakLine?: BreakLine;
     options?: {
-      timeout?: number
+      timeout?: number;
     };
   });
+
 
   /**
    * Send printing buffer to printer
