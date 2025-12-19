@@ -3,7 +3,7 @@ const { ThermalPrinter, PrinterTypes, CharacterSet, BreakLine } = require('../no
 async function example () {
   const printer = new ThermalPrinter({
     type: PrinterTypes.EPSON, // 'star' or 'epson'
-    interface: process.argv[2],
+    interface: 'COM4',
     options: {
       timeout: 1000,
     },
